@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: content-box;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.content{
+    position: relative;
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.grid{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-left: -10px;
+
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+.grid:after{
+    display: block;
+    content: '.';
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.grid .grid-item{
+    float: left;
+    padding-left: 10px;
+}
+
+.grid .card{
+    position: relative;
+    width: 190px;
+    height: 140px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 0 3px 3px #e5e5e5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.grid .grid-item.active .card{
+    width: 250px;
+    box-shadow: 0 5px 1px #e5e5e5;
+}
+
+
+.card .img{
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+}
+
+.grid .grid-item.active .img{
+    width: 50%;
+
+}
+
+.grid .grid-item.active .title{
+    width: 50%;
+}
+
+.card .img a{
+    display: block;
+}
+
+.card .img a img{
+    width: 100%;
+    height: auto;
+
+}
+
+.grid .card .price{
+    position: absolute;
+    bottom: 20px;
+    font-size: 18px;
+    color: orange;
+    font-weight: 600;
+
+}
