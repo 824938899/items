@@ -2,7 +2,7 @@
  * Created by 824938899 on 2018/7/24 0024.
  */
 window.onload = function(){
-    init()
+    init();
 };
 
 //addEvent
@@ -30,14 +30,14 @@ function removeEvent(el,type,fn){
         });
 
     }else{
-        el['on' + type]
+        el['on' + type] = null;
     }
 
 }
 
 
 function init(){
-
+    accordion();
 }
 
 
@@ -48,8 +48,14 @@ var accordion = (function(){
         initIndex = 0;
 
 
-        addEvent(grid, 'mouseover', mouseGoods);
+        addEvent(grid, 'mouseover', function(){
+            addEvent(this, 'mouseover', mouseGoods)
+        });
 
+
+        removeEvent(grid, 'mouseover', function(){
+            addEvent(this, 'mouseover', mouseGoods)
+        });
 
 
 
@@ -89,4 +95,4 @@ var accordion = (function(){
         return target;
     }
 
-})();
+});
