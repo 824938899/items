@@ -1,0 +1,126 @@
+
+*{
+	box-sizing: border-box
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.4;
+	background-color: #e5e5e5
+}
+
+a{
+	color: #333;
+	text-decoration: none
+}
+
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+img{
+	border: none;
+	max-width: 100%;
+}
+
+.container{
+	max-width: 1200px;
+	height: 100vh;
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 50px 0
+}
+
+.menu-box{
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.menu-box .menu-con{
+	position: absolute;
+	left: 200px;
+	top: 0;
+	width: 900px;
+	height: 400px
+}
+
+.menu-box .menu {
+	width: 200px;
+	height: 400px;
+	border: 1px solid #e5e5e5;
+	text-align: left
+}
+
+.menu-box .menu .menu-list{
+	font-size: 0
+}
+
+.menu-box .menu .menu-nav-item{
+	position: relative;
+	line-height: 40px;
+	font-size: 14px;
+	padding: 0 10px;
+	cursor: pointer
+}
+
+.menu-box .menu .menu-nav-item a:hover{
+	color: #f87010
+}
+
+.menu-box .menu .menu-nav-item.active{
+	background-color: #999
+}
+
+.menu-box .menu .menu-nav-item+.menu-nav-item:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -1px;
+	height: 1px;
+	background-color: #999;
+
+}
+
+
+.menu-box .menu-con.hide{
+	display: none;
+}
+
+
+.menu-box .menu-con{
+	display: block;
+	background-color: #f87010;
+	padding: 4px 0 0 0;
+}
+
+
+
+.menu-box .menu-con .menu-con-list{
+	height: 100%
+}
+
+.menu-box .menu-con .menu-con-item{
+	height: 100%;
+	display: none;
+}
+
+.menu-box .menu-con .menu-con-item.active{
+	display: block;
+}
+
+.menu-box .menu-con .menu-con-item div{
+	height: 100%
+}
+
+.menu-box .menu-con .menu-con-item div img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
